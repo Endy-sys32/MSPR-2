@@ -1,0 +1,6 @@
+psycopg2-binary
+qrcode
+pillow
+cryptography
+pyotp
+requests

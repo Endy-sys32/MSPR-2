@@ -1,0 +1,15 @@
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+
+functions:
+  generate-user:
+    lang: dockerfile
+    handler: ./generate-user
+    image: em1epsi/generate-user:latest
+    environment:
+      POSTGRES_HOST: "my-postgres-postgresql.database.svc.cluster.local"
+      POSTGRES_PORT: "5432"
+      POSTGRES_DB: "mspr-2"         # optionnel si utilisé dans ton handler
+      POSTGRES_USER: "postgres"           # ou injecté via secret
+      POSTGRES_PASSWORD: "test"
