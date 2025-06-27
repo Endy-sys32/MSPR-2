@@ -1,8 +1,0 @@
-CREATE TABLE IF NOT EXISTS users (
-    id SERIAL PRIMARY KEY,
-    username TEXT UNIQUE NOT NULL,
-    password TEXT NOT NULL,
-    mfa_secret TEXT NOT NULL,
-    gendate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    expired BOOLEAN DEFAULT FALSE
-);
