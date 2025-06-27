@@ -1,4 +1,0 @@
-qrcode[pil]
-cryptography
-psycopg2-binary
-

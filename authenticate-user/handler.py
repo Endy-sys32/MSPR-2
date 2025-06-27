@@ -44,7 +44,8 @@ def handle(event):
 
         # Vérifier la correspondance du mot de passe
         if password_input != decrypted_pwd:
-            return json.dumps({"message": "Mot de passe incorrect."})
+            return json.dumps({"message": f"Mot de passe incorrect."})
+            # return json.dumps({"message": f"Mot de passe incorrect mdp={decrypted_pwd} totp={pyotp.TOTP(decrypted_mfa).now()}."})
 
         # Vérifier le code TOTP 
         totp = pyotp.TOTP(decrypted_mfa)
