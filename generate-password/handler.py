@@ -55,6 +55,7 @@ def handle(event):
             conn.close()
             return json.dumps({
                 "message": f"Utilisateur {username} créé.",
+                "password": f"Mot de passe : {password_plain}",
                 "qrcode": f"data:image/png;base64,{qr_base64}"
             })
 

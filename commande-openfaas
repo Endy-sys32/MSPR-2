@@ -22,5 +22,8 @@ docker push em1epsi/nom-image:latest
 # deploy de l'image sur openfaas
 faas-cli deploy -f ../nom-image.yml
 
+# faire tout le processus de déploiement
+faas-cli up -f nom-image.yml
+
 #tester une fonction
 echo '{"username": "test"}' | faas-cli invoke generate-2fa
